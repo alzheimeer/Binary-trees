@@ -7,14 +7,21 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int n = 0;
+	int n, a, b = 0;
 
 	if (!tree)
 		return (0);
-
 	n = binary_tree_balance(tree);
+
 	if (n == 0)
-		return (1);
+	{
+		a = binary_tree_is_perfect(tree->left);
+		b = binary_tree_is_perfect(tree->right);
+
+		if (a == b)
+			return (1);
+		return (0);
+	}
 	else
 		return (0);
 }
