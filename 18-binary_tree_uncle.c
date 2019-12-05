@@ -10,7 +10,6 @@
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	int a, b;
-	binary_tree_t *r;
 
 	if (!node || !node->parent || !node->parent->parent)
 		return (NULL);
@@ -19,9 +18,9 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 	b = node->parent->parent->left->n;
 
 	if (b == a)
-		r = node->parent->parent->right;
+		return (node->parent->parent->right);
 	else
-		r = node->parent->parent->left;
-	return (r);
+		return (node->parent->parent->left);
+	return (NULL);
 
 }
