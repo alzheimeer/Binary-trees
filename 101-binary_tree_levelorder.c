@@ -16,7 +16,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		plevel(tree, func, level);
 }
 /**
- * print_at_level - print node, especific level
+ * plevel - print node, especific level
  * @tree: pointer to the root node of the tree to traverse
  * @func: pointer to a function to call for each node.
  * @level: level to print
