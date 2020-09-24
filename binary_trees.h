@@ -81,5 +81,7 @@ int *heap_to_sorted_array(heap_t *heap, size_t *size);
 void binary_tree_print(const binary_tree_t *);
 /*static int print_t(const binary_tree_t *tree, int offset, int depth, char **s);*/
 /*static size_t _height(const binary_tree_t *tree);*/
+int reorden(heap_t **root);
+void verify(heap_t **x);
 
 #endif /* L_M */
